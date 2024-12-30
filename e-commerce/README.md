@@ -1,6 +1,6 @@
 # E-commerce
 
-[Demo](https://alii16.github.io/chiper-aes-128/)
+[Demo](https://alii16.github.io/project-gabutz/tree/main/e-commerce/)
     
 ## 🚀 How to Use
 
@@ -8,10 +8,10 @@
 
     ```bash
     # Clone this repository or download it
-    $ git clone https://github.com/alii16/chiper-aes-128/
+    $ git clone https://alii16.github.io/project-gabutz/tree/main/e-commerce/
 
     # Go into the repository
-    $ cd chiper-aes-128-main
+    $ cd e-commerce-main
 
     # Open it with your text editor
     $ code .
