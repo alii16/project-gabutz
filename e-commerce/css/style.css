@@ -1,0 +1,74 @@
+/* button nav */
+.button{
+    margin-right: 50px;
+}
+
+.mrkanan{
+    margin-right: 170px;
+}
+
+.mrkiri{
+    margin-left: 170px;;
+}
+
+.navbtn{
+    color: black;
+}
+
+.navbtn:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.bordr{
+   border-radius: 30px;
+   border: 0px solid white;
+   background-color: white;
+   padding: 8px 30px;
+}
+
+.bordr:hover{
+    background-color: rgba(0, 0, 0, 0.246);
+}
+
+.navcolor{
+    background-color: #CED7FE;
+}
+
+.tex{
+    color: black;
+    font-weight: bold;
+}
+
+.imag{
+    background-repeat: no-repeat center center;
+    margin-top: 2vw;
+}
+
+.tampilan{
+	z-index: 1;
+}
+
+.tampilan .buttn{
+    position: absolute;
+    top: 27vw;
+    left: 10vw;
+	z-index: 2;
+}
+
+.buttn{
+    border-radius: 30px;
+    border: 0px solid white;
+    background-color: rgb(0, 0, 0);
+    padding: 7px 35px;
+    color: rgb(255, 255, 255);
+}
+
+.buttn:hover{
+    background-color: #FFA81D;
+    cursor: pointer;
+}
+
+.tampilan ,tex{
+    font-size: 1.4vw;
+}

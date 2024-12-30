@@ -1,0 +1,115 @@
+body{
+    background-color: #CED7FE;
+}
+
+.padding{
+    padding: 3rem !important;
+}
+
+.user-card-full{
+    overflow: hidden;
+}
+
+.card{
+    border-radius: 15px;
+}
+
+.bg{
+    background: transparent linear-gradient(270deg, #6D75F4 0%, #485ABE 100%) 0% 0% no-repeat padding-box;
+}
+
+.user-card-full .user-profil{
+    border-radius: 15px;
+}
+
+.user-profil{
+    padding: 20px;
+}
+
+.card-block{
+    padding: 1.25rem;;
+}
+
+.m-b-25{
+    margin-bottom: 25px;
+}
+
+.img-radius{
+    border-radius: 5px;
+}
+
+h6{
+    font-size: 14px;
+}
+
+.card .card-block p{
+    line-height: 25px;
+}
+
+@media only screen and (min-width: 1400px){
+    p{
+        font-size: 14px;
+    }
+}
+
+.b-b-default{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.m-b-20{
+    margin-bottom: 10px;
+}
+
+.p-b-5{
+    padding-bottom: 5pc !important;
+}
+
+.m-b-10{
+    margin-bottom: 5px;
+}
+
+.text-muted{
+    color: #919aa3 !important;
+}
+
+.f-w-600{
+    font-weight: 600px;
+}
+
+.m-t-40{
+    margin-top: 20px;
+}
+
+.user-card-full .social-link li{
+    display: inline-block;
+}
+
+
+.buttn{
+    background: transparent linear-gradient(270deg, #6D75F4 0%, #485ABE 100%) 0% 0% no-repeat padding-box;
+    border-radius: 7px;
+    padding: 6px 10px;
+    border: 0px;
+}
+
+.buttn:hover{
+    background: rgb(58, 58, 58);
+    color: rgb(255, 255, 255);
+}
+
+.tex{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: none;
+}
+a{
+    color: rgb(255, 255, 255);
+}
+
+.txt{
+    color: rgb(255, 255, 255);
+}
+

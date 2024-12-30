@@ -1,0 +1,58 @@
+.container{
+    margin: 50px auto;
+}
+
+.radius{
+    border-radius: 15px;
+}
+
+.card{
+    border-radius: 15px;
+}
+
+.card-body{
+    padding: 5px;
+}
+
+.buttn{
+    background-color: #CED7FE;
+    border-radius: 11px;
+    padding: 5px 15px !important;
+    border: 0px;
+}
+
+.buttn:hover{
+    background-color: rgba(0, 0, 0, 0.459);
+    color: white;
+}
+
+button:hover{
+    outline: none;
+}
+
+.tex{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: none;
+}
+a{
+    color: black;
+}
+
+.button{
+    float: right;
+}
+
+.bt{
+    height: 35px;
+}
+
+@media screen and (min-width: 600px) {
+    h1 {
+      font-size: 45px;
+    }
+  }
+  

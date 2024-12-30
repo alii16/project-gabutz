@@ -1,0 +1,57 @@
+body{
+    background-color: #CED7FE;
+}
+
+.bordr{
+    width: 370px;
+    border: 0px solid red;
+    margin: 5vw auto;
+    background: transparent linear-gradient(179deg, #485ABE 0%, #6D75F4 100%) 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+}
+
+form{
+    padding: 40px;
+}
+
+
+.left{
+    margin-left: 5vw;
+}
+
+.buttn{
+    background-color: #ffffff;
+    border-radius: 11px;
+    padding: 7px 16px;
+    border: 0px;
+}
+
+.buttn:hover{
+    background-color: rgba(0, 0, 0, 0.459);
+    color: white;
+}
+
+button:hover{
+    outline: none;
+}
+
+.tex{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: none;
+}
+a{
+    color: black;
+}
+
+.clr{
+    color:#FFA81D;
+}
+
+h1, label{
+    color: white;
+}
+
