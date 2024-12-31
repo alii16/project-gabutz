@@ -318,6 +318,11 @@ body .sub-title {
     text-align: center;
     width: 80%;
   }
+  @media screen and (max-width: 50em) {
+    body .user-input-section .user-input input {
+      width: 100%;
+    }
+  }
   body .user-input-section .user-input input::-moz-placeholder {
     color: #344966;
   }
