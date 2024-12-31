@@ -272,6 +272,7 @@ body .sub-title {
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
+    border: none;
     height: 100%;
     justify-content: center;
     width: 40%;
