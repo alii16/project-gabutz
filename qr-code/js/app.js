@@ -52,7 +52,7 @@ function generate(user_input) {
 }
 
 generate({
-  value: "https://qr-codes.vercel.app",
+  value: "https://github.com/alii16/",
 });
 
 // genrate vs scan
