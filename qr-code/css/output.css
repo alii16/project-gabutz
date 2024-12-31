@@ -270,7 +270,6 @@ body .sub-title {
     align-items: center;
     background-color: hsla(0, 0%, 100%, 0.04);
     border-radius: 1rem;
-    border: 1px solid #fff;
     display: flex;
     flex-direction: column;
     height: 100%;
