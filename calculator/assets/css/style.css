@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  background-color: #2c2c2c; /* Hitam keabuan untuk latar belakang */
+  color: white;
+  user-select: none;
+}
+
+
+h2 {
+  padding-top: 10px;
+  font-size: 2rem;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background: linear-gradient(90deg, #ff69b4, #4b0082); /* Gradasi warna pink dan indigo */
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 3s infinite; /* Tambahkan animasi gradasi */
+}
+
+/* Animasi untuk gradasi */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+
+.container {
+  max-width: 290px;
+  margin: 10px auto;
+}
+
+#display {
+  text-align: right;
+  height: 60px;
+  padding-right: 10px;
+  line-height: 80px;
+  font-size: 1.5rem;
+  border-radius: 20px 20px 0 0;
+  background-color: #2c2c2c; /* Hitam keabuan */
+  color: #f2f2f2; /* Warna putih cerah untuk teks */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button {
+  border: 1px solid #444444; /* Warna border lebih gelap */
+  background-color: #3a3a3a; /* Warna tombol gelap */
+  line-height: 60px;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #5c5c5c; /* Warna lebih terang saat hover */
+  border: 1px solid #42389D;
+}
+
+.button.left {
+  border-radius: 0 0 0 15px;
+}
+
+.button.right {
+  background-color: #4b0082;
+  border: 1px solid #1C64F2;
+  border-radius: 0 0 15px 0;
+}
+
+.button:active {
+  background-color: #6a0dad; /* Warna ungu saat aktif */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer-name {
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff69b4, #8a2be2, #0000ff); /* Gradasi warna */
+  background-size: 300%; /* Perbesar background untuk efek animasi */
+  -webkit-background-clip: text; /* Gradasi hanya muncul di area teks */
+  -webkit-text-fill-color: transparent; /* Teks menjadi transparan */
+  animation: gradient-animation 3s infinite; /* Tambahkan animasi */
+}
+
+/* Animasi untuk gradasi */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+.footer {
+  background-color: #1e1e2e; /* Warna latar belakang gelap */
+  color: #f0f4ef; /* Warna teks terang */
+  padding: 1.5rem 0; /* Ruang di atas dan bawah */
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.footer-content {
+  max-width: 1200px; /* Membatasi lebar konten footer */
+  margin: 0 auto; /* Memusatkan konten */
+}
+
+.footer-content p {
+  margin: 0.5rem 0; /* Spasi kecil di atas dan bawah teks */
+}
+
+.social-links {
+  display: flex;
+  justify-content: center; /* Memusatkan tautan sosial media */
+  gap: 1rem; /* Memberi jarak antar tautan */
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  color: #ff69b4; /* Warna link pink cerah */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Efek hover */
+}
+
+.social-links a:hover {
+  color: #0000ff; /* Warna berubah menjadi biru saat hover */
+}
+
+@media (max-width: 50em) {
+  .footer {
+    font-size: 0.5rem; /* Ukuran teks lebih kecil di perangkat kecil */
+  }
+
+  .social-links {
+    flex-wrap: wrap; /* Tautan sosial media melipat pada layar kecil */
+    gap: 0.5rem;
+  }
+}
+
+
+/* Animasi untuk gradasi */
+@keyframes gradient-animation {
+  0% {
+      background-position: 0%;
+  }
+  50% {
+      background-position: 100%;
+  }
+  100% {
+      background-position: 0%;
+  }
+}
