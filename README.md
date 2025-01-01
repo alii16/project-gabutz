@@ -1,6 +1,6 @@
-# Snake Game
+# Project Gabutz
 
-[Demo](https://alii16.github.io/project-gabutz/snake-game/)
+[Demo](https://alii16.github.io/project-gabutz/)
 
 ## 🚀 How to Use
 
@@ -12,7 +12,6 @@
 
     # Go into the repository
     $ cd project-gabutz-main
-    $ cd snake-game
 
     # Open it with your text editor
     $ code .
