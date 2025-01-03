@@ -41,6 +41,7 @@ if (isset($_POST['login'])) {
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/154661557?v=4" />
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/preline@1.3.0/dist/preline.min.css" rel="stylesheet">
 
