@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 // Memeriksa apakah pengguna telah login
 if (!isset($_SESSION['user_id'])) {
@@ -8,7 +7,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Memuat koneksi database
-require 'koneksi.php';
+require 'config/koneksi.php';
 
 // Memeriksa apakah form sudah disubmit
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -26,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Redirect ke halaman tiket pengguna dengan pesan sukses
     $_SESSION['message'] = 'Payment successful!';
-    header('Location: view_user_booked_tickets.php');
+    header('Location: index.php?page=view_user_booked_tickets');
     exit;
 }
 
@@ -41,7 +40,7 @@ $ticket = $stmt->fetch(PDO::FETCH_ASSOC);
 if (!$ticket) {
     // Jika tiket tidak ditemukan, redirect ke halaman tiket pengguna dengan pesan error
     $_SESSION['message'] = 'Ticket not found or already paid!';
-    header('Location: view_user_booked_tickets.php');
+    header('Location: index.php?page=view_user_booked_tickets');
     exit;
 }
 
@@ -57,35 +56,7 @@ $seat = $ticket['seat'];
 $ticket_price = 10; // Misalnya, harga tiket adalah $10
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-
-<body class="bg-gray-100">
-    <nav class="bg-indigo-700 shadow-lg">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex justify-between items-center">
-                <div>
-                    <a href="index.php" class="text-xl font-bold text-white lg:text-2xl">Cinema Ticket System</a>
-                </div>
-                <div class="flex space-x-4">
-                    <a href="view_films.php"
-                        class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">View Films</a>
-                    <a href="view_user_booked_tickets.php"
-                        class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">My Tickets</a>
-                    <a href="logout.php" class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">Logout</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container mx-auto py-8">
+<div class="container mx-auto py-8">
         <div class="bg-white shadow-md rounded-lg overflow-hidden max-w-md mx-auto">
             <form method="POST" class="p-6">
                 <div class="mb-4">
@@ -118,6 +89,3 @@ $ticket_price = 10; // Misalnya, harga tiket adalah $10
             </form>
         </div>
     </div>
-</body>
-
-</html>

@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 // Memeriksa apakah pengguna telah login dan memiliki peran admin
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     header('Location: login.php');
@@ -8,7 +6,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 }
 
 // Memuat koneksi database
-require 'koneksi.php';
+require 'config/koneksi.php';
 
 // Memeriksa apakah ID film ada di URL
 if (!isset($_GET['id'])) {
@@ -33,12 +31,12 @@ try {
     // Komit transaksi
     $pdo->commit();
 
-    header('Location: view_films.php');
+    header('Location: index.php?page=view_films');
     exit;
 } catch (Exception $e) {
     // Rollback transaksi jika terjadi kesalahan
     $pdo->rollBack();
     $error = 'Failed to delete film: ' . $e->getMessage();
-    header('Location: view_films.php?error=' . urlencode($error));
+    header('Location: index.php?page=view_films&error=' . urlencode($error));
     exit;
 }

@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-require 'koneksi.php';
+require 'config/koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['ticket_id'])) {
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['error'] = "Invalid request.";
     }
 
-    header('Location: view_user_booked_tickets.php');
+    header('Location: index.php?page=view_user_booked_tickets');
     exit;
 } else {
     header('Location: index.php');
