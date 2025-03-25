@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Downloader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .brutalist-card {
+            background-color: #fff;
+            border: 4px solid #000;
+            box-shadow: 10px 10px 0 #000;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+        .brutalist-card:hover {
+            transform: translate(-5px, -5px);
+            box-shadow: 15px 15px 0 #000;
+        }
+        .brutalist-button {
+            background-color: #ff4500;
+            border: 4px solid #000;
+            box-shadow: 5px 5px 0 #000;
+            color: #fff;
+            padding: 10px;
+            text-transform: uppercase;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .brutalist-button:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 8px 8px 0 #000;
+        }
+        .brutalist-input-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .brutalist-input {
+            border: 4px solid #000;
+            box-shadow: 5px 5px 0 #000;
+            padding: 10px;
+            width: 100%;
+            padding-left: 40px; /* Add space for the icon */
+        }
+        .input-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            animation: move 2s infinite;
+        }
+        .logo {
+            font-size: 2.5rem;
+            color: #ff4500;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            position: relative;
+        }
+        .logo span {
+            color: #000;
+        }
+        .logo::before, .logo::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: #000;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .logo::before {
+            top: 0;
+        }
+        .logo::after {
+            top: auto;
+            bottom: 0;
+        }
+        .brutalist-card::before, .brutalist-card::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: #000;
+            left: 0;
+        }
+        .brutalist-card::before {
+            top: -10px;
+        }
+        .brutalist-card::after {
+            bottom: -10px;
+        }
+        @keyframes move {
+            0% { transform: translateY(-50%) translateX(0); }
+            50% { transform: translateY(-50%) translateX(5px); }
+            100% { transform: translateY(-50%) translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="brutalist-card w-96">
+        <div class="logo">
+            <span>🔥</span> Image Downloader <span>🔥</span>
+        </div>
+        <div class="brutalist-input-wrapper">
+            <input id="imageUrl" type="text" placeholder="Masukkan URL Gambar" class="brutalist-input">
+            <i class="fa-solid fa-paperclip input-icon"></i>
+        </div>
+        <button onclick="downloadImage()" class="brutalist-button w-full">Download</button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>    <script>
+        function downloadImage() {
+            const url = document.getElementById('imageUrl').value;
+            if (!url) {
+                alert('Masukkan URL gambar terlebih dahulu!');
+                return;
+            }
+            
+            fetch(url)
+                .then(response => response.blob())
+                .then(blob => {
+                    const a = document.createElement('a');
+                    a.href = URL.createObjectURL(blob);
+                    a.download = 'downloaded-image';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                })
+                .catch(error => alert('Gagal mengunduh gambar! Pastikan URL benar.'));
+        }
+    </script>
+</body>
+</html>
